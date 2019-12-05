@@ -83,7 +83,7 @@ public class Xlfile_Reader {
                 Cell.setCellValue(Result);
             }
             // Constant variable Test data path & test data file name
-            FileOutputStream fileOut = new FileOutputStream("../Lotame-Url/src/test/java/Lotame/laptop_url/Lotame_laptop_pages.xls");
+            FileOutputStream fileOut = new FileOutputStream("../Lotame-Url/src/test/java/lotame/laptopurl/Lotame_laptop_pages.xls");
             ExcelWBook.write(fileOut);
             fileOut.flush();
             fileOut.close();

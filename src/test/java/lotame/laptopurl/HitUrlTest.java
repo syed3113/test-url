@@ -14,8 +14,8 @@ public class HitUrlTest {
 	WebDriver driver;
 	Instant start;
 
-	@Test(testName="Laptop", enabled=true)
-	public void hit() throws Exception {
+	@Test
+	public void hitUrlTest() throws Exception {
 		Xlfile_Reader.setExcelFile("../Lotame-Url/src/test/java/lotame/laptopurl/Lotame_laptop_pages.xls", "Sheet1");
 		for (int i = 1; i < Xlfile_Reader.getRowCount("Sheet1"); i++) {
 			System.out.println(Xlfile_Reader.getRowCount("Sheet1"));
@@ -23,27 +23,29 @@ public class HitUrlTest {
 			System.out.println("Url:-" + url);
 
 			
-			  System.setProperty("webdriver.chrome.driver",
-			  "/usr/lib64/chromium-browser/chromedriver"); // Server location //
-			  
-			  ChromeOptions chromeOptions = new ChromeOptions();
-			  chromeOptions.addArguments("--headless"); //
-			  chromeOptions.addArguments("window-size=1920, 1080");
-			  chromeOptions.addArguments(
-			  " Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36"
-			  ); driver = new ChromeDriver(chromeOptions);
-			 
-
-			// For local mobile view testing
-
 			/*
-			 * ChromeOptions chromeOptions = new ChromeOptions(); //
+			 * System.setProperty("webdriver.chrome.driver",
+			 * "/usr/lib64/chromium-browser/chromedriver"); // Server location //
+			 * 
+			 * ChromeOptions chromeOptions = new ChromeOptions();
 			 * chromeOptions.addArguments("--headless"); //
 			 * chromeOptions.addArguments("window-size=1920, 1080");
 			 * chromeOptions.addArguments(
 			 * " Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36"
 			 * ); driver = new ChromeDriver(chromeOptions);
 			 */
+			 
+
+			// For local mobile view testing
+
+			
+			  ChromeOptions chromeOptions = new ChromeOptions(); //
+			  chromeOptions.addArguments("--headless"); //
+			  chromeOptions.addArguments("window-size=1920, 1080");
+			  chromeOptions.addArguments(
+			  " Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36"
+			  ); driver = new ChromeDriver(chromeOptions);
+			 
 			int j;
 			start = Instant.now();
 			for (j = 1; j <= 10; j++)
