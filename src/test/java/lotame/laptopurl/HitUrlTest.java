@@ -49,7 +49,7 @@ public class HitUrlTest {
 			 */
 			int j;
 			start = Instant.now();
-			for (j = 1; j <= 10; j++)
+			for (j = 1; j <= 1000; j++)
 
 			{
 				driver.get(url);
